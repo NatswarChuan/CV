@@ -35,18 +35,28 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Vu Minh Chuan",
-      "jobTitle": "Backend Developer",
-      "url": "https://natswarchuan.github.io/CV/",
-      "image": "https://natswarchuan.github.io/CV/public/assets/avatar.jpg",
-      "sameAs": [
-        "https://www.facebook.com/NatswarVMC/",
-        "https://github.com/natswarchuan",
-        "https://youtube.com/@natswar-chuan",
-        "https://gitlab.com/NatswarChuan"
-      ],
-      "knowsAbout": ["C#", "PHP", "Java", ".NET", "Laravel", "Spring", "System Design", "Database Architecture"]
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Vu Minh Chuan",
+          "jobTitle": "Backend Developer",
+          "url": "https://natswarchuan.github.io/CV/",
+          "image": "https://natswarchuan.github.io/CV/public/assets/avatar.jpg",
+          "sameAs": [
+            "https://www.facebook.com/NatswarVMC/",
+            "https://github.com/natswarchuan",
+            "https://youtube.com/@natswar-chuan",
+            "https://gitlab.com/NatswarChuan"
+          ],
+          "knowsAbout": ["C#", "PHP", "Java", ".NET", "Laravel", "Spring", "System Design", "Database Architecture"]
+        },
+        {
+          "@type": "Organization",
+          "name": "NatswarChuan",
+          "url": "https://natswarchuan.github.io/CV/",
+          "logo": "https://natswarchuan.github.io/CV/public/assets/logo.jpeg"
+        }
+      ]
     }
     </script>
 
