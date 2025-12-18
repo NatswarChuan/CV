@@ -42,7 +42,7 @@ body {
     display: block;
     object-fit: cover;
 
-    background-image: url('../avatar.jpg');
+    background-image: url('../assets/avatar.jpg');
     background-size: cover;
     background-position: center;
 }

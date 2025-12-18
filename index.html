@@ -3,28 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Vu Minh Chuan</title>
+
+    <!-- SEO Meta Tags -->
     <meta name="description"
         content="CV of Vu Minh Chuan - Backend Developer specializing in C#, PHP, Java, .NET, Laravel, and Spring. Experienced in system design, database architecture, and cloud integration.">
     <meta name="keywords"
         content="Vu Minh Chuan, Backend Developer, Software Engineer, CV, Resume, C#, PHP, Java, .NET, Laravel, Spring Boot, Ho Chi Minh City, NatswarChuan">
-    <meta name="author" content="Vu Minh Chuan">
+    <meta name="author" content="NatswarChuan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://natswarchuan.github.io/CV/">
 
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://natswarchuan.github.io/CV/">
     <meta property="og:title" content="CV - Vu Minh Chuan | Backend Developer">
     <meta property="og:description"
         content="Professional CV of Vu Minh Chuan, a Backend Developer with expertise in building scalable systems using .NET, Laravel, and Spring.">
-    <meta property="og:image" content="avatar.jpg">
+    <meta property="og:image" content="https://natswarchuan.github.io/CV/public/assets/avatar.jpg">
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://natswarchuan.github.io/CV/">
+    <meta property="twitter:title" content="CV - Vu Minh Chuan | Backend Developer">
+    <meta property="twitter:description"
+        content="Professional CV of Vu Minh Chuan, a Backend Developer with expertise in building scalable systems using .NET, Laravel, and Spring.">
+    <meta property="twitter:image" content="https://natswarchuan.github.io/CV/public/assets/avatar.jpg">
+
+    <link rel="stylesheet" href="/public/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/public/assets/logo.jpeg">
 </head>
 
 <body>
 
     <div class="container">
         <div class="lang-switch no-print">
-            <button onclick="exportPDF()">Download PDF</button>
-            <a href="index_vi.html">Tiếng Việt</a>
+            <button id="pdf-btn" onclick="exportPDF()">Download PDF</button>
+            <button id="lang-btn" onclick="changeLanguage()">Tiếng Việt</button>
         </div>
 
         <div class="sidebar">
@@ -32,10 +49,11 @@
             <div class="profile-img"></div>
 
             <div class="contact-info">
-                <h3>Contact</h3>
+                <h3 data-i18n="contact.title">Contact</h3>
                 <div class="contact-item"><strong>Phone:</strong><br>+84 908 713 697</div>
                 <div class="contact-item"><strong>Email:</strong><br>natswarchuan@gmail.com</div>
-                <div class="contact-item"><strong>Address:</strong><br>Ho Chi Minh City</div>
+                <div class="contact-item"><strong data-i18n="contact.address">Address:</strong><br><span
+                        data-i18n="contact.address">Ho Chi Minh City</span></div>
                 <div class="contact-item"><strong>Facebook:</strong><br><a href="https://www.facebook.com/NatswarVMC/"
                         target="_blank">facebook.com/NatswarVMC</a></div>
                 <div class="contact-item"><strong>Github:</strong><br><a href="https://github.com/natswarchuan"
@@ -47,57 +65,62 @@
             </div>
 
             <div class="education">
-                <h3>Education</h3>
+                <h3 data-i18n="education.title">Education</h3>
                 <div class="edu-item">
-                    <strong>Thu Duc College of Technology (TDC)</strong><br>
+                    <strong data-i18n="education.school">Thu Duc College of Technology (TDC)</strong><br>
                     <span style="font-size:0.9em">2019 - 2022</span><br>
-                    Software Engineering.<br>
-                    <span style="font-size:0.85em; color: #666;">Collaborative training program with Tokyo Metropolitan
+                    <span data-i18n="education.degree">Software Engineering.</span><br>
+                    <span style="font-size:0.85em; color: #666;" data-i18n="education.desc">Collaborative training
+                        program with Tokyo Metropolitan
                         College of Industrial Technology (TMCIT).</span>
                 </div>
             </div>
 
             <div class="skills">
-                <h3>Programming Skills</h3>
+                <h3 data-i18n="skills.title">Programming Skills</h3>
                 <ul class="skill-list">
-                    <li><strong>Languages:</strong> C#, PHP, JavaScript, TypeScript, Java</li>
-                    <li><strong>Database:</strong> MySQL, PostgreSQL, SQL Server</li>
-                    <li><strong>Frameworks:</strong> .NET, Laravel, Express.js, React, Spring</li>
-                    <li><strong>Tools:</strong> Git, Docker (Containerization)</li>
+                    <li data-i18n="skills.languages"><strong>Languages:</strong> C#, PHP, JavaScript, TypeScript, Java
+                    </li>
+                    <li data-i18n="skills.database"><strong>Database:</strong> MySQL, PostgreSQL, SQL Server</li>
+                    <li data-i18n="skills.frameworks"><strong>Frameworks:</strong> .NET, Laravel, Express.js, React,
+                        Spring</li>
+                    <li data-i18n="skills.tools"><strong>Tools:</strong> Git, Docker (Containerization)</li>
                 </ul>
             </div>
 
             <div class="skills">
-                <h3>Soft Skills</h3>
+                <h3 data-i18n="soft_skills.title">Soft Skills</h3>
                 <ul class="skill-list">
-                    <li>Learning and Adaptability</li>
-                    <li>Patience & Work Under Pressure</li>
-                    <li>Problem Solving Skills</li>
-                    <li>Time Management Skills</li>
-                    <li>Teamwork Skills</li>
+                    <li data-i18n="soft_skills.1">Learning and Adaptability</li>
+                    <li data-i18n="soft_skills.2">Patience & Work Under Pressure</li>
+                    <li data-i18n="soft_skills.3">Problem Solving Skills</li>
+                    <li data-i18n="soft_skills.4">Time Management Skills</li>
+                    <li data-i18n="soft_skills.5">Teamwork Skills</li>
                 </ul>
             </div>
 
             <div class="languages">
-                <h3>Languages</h3>
+                <h3 data-i18n="languages.title">Languages</h3>
                 <ul class="lang-list">
-                    <li><strong>English:</strong> Basic communication</li>
-                    <li><strong>Japanese:</strong> Basic communication</li>
+                    <li data-i18n="languages.en"><strong>English:</strong> Basic communication</li>
+                    <li data-i18n="languages.jp"><strong>Japanese:</strong> Basic communication</li>
                 </ul>
             </div>
 
             <div class="certificates">
-                <h3>Certificates</h3>
+                <h3 data-i18n="certificates.title">Certificates</h3>
                 <ul class="skill-list">
-                    <li>IT Passport (Japan) 2023</li>
+                    <li data-i18n="certificates.1">IT Passport (Japan) 2023</li>
                 </ul>
             </div>
 
             <div class="awards">
-                <h3>Awards</h3>
+                <h3 data-i18n="awards.title">Awards</h3>
                 <ul class="skill-list">
-                    <li><strong>2024:</strong> Web skills encouragement prize at Ho Chi Minh City level.</li>
-                    <li><strong>2021-2023:</strong> Guide students to take the city-level Web skills exam.</li>
+                    <li data-i18n="awards.1"><strong>2024:</strong> Web skills encouragement prize at Ho Chi Minh City
+                        level.</li>
+                    <li data-i18n="awards.2"><strong>2021-2023:</strong> Guide students to take the city-level Web
+                        skills exam.</li>
                 </ul>
             </div>
         </div>
@@ -105,19 +128,23 @@
 
         <div class="main-content">
             <div class="header">
-                <h1>Vu Minh Chuan</h1>
-                <h2>Backend Developer</h2>
+                <h1 data-i18n="profile.name">Vu Minh Chuan</h1>
+                <h2 data-i18n="profile.role">Backend Developer</h2>
             </div>
 
             <div class="section">
-                <h3 class="section-title">Career Objective</h3>
-                <p>
-                    With over 3 years of experience, my core strengths lie in deep system thinking cultivated through <strong>developing custom Frameworks</strong> (ORM, Cache) and the discipline and professionalism gained from <strong>working onsite in Japan</strong>. Combining this with a strong Product Ownership mindset, I aim to pursue long-term growth within Product companies to build high-quality technology solutions that deliver tangible value.
+                <h3 class="section-title" data-i18n="section.career_objective">Career Objective</h3>
+                <p data-i18n="career_objective.content">
+                    With over 3 years of experience, my core strengths lie in deep system thinking cultivated through
+                    <strong>developing custom Frameworks</strong> (ORM, Cache) and the discipline and professionalism
+                    gained from <strong>working onsite in Japan</strong>. Combining this with a strong Product Ownership
+                    mindset, I aim to pursue long-term growth within Product companies to build high-quality technology
+                    solutions that deliver tangible value.
                 </p>
             </div>
 
             <div class="section">
-                <h3 class="section-title">Work Experience</h3>
+                <h3 class="section-title" data-i18n="section.work_experience">Work Experience</h3>
 
 
                 <div class="job-item">
@@ -125,8 +152,8 @@
                         <span class="company">2handvn</span>
                         <span class="date">9/2025 - Present</span>
                     </div>
-                    <div class="job-title">Backend Developer</div>
-                    <div class="job-desc">
+                    <div class="job-title" data-i18n="job.2handvn.title">Backend Developer</div>
+                    <div class="job-desc" data-i18n="job.2handvn.desc">
                         <ul>
                             <li>Designed and deployed the entire Back-end system and Database architecture for a C2B2C
                                 model.</li>
@@ -146,8 +173,8 @@
                         <span class="company">FidoVN</span>
                         <span class="date">4/2025 - 9/2025</span>
                     </div>
-                    <div class="job-title">Backend Developer</div>
-                    <div class="job-desc">
+                    <div class="job-title" data-i18n="job.fidovn.title">Backend Developer</div>
+                    <div class="job-desc" data-i18n="job.fidovn.desc">
                         <ul>
                             <li>AI-CV system development.</li>
                             <li>Designing a Gateway to automate and standardize SEO for a website.</li>
@@ -165,8 +192,9 @@
                         <span class="company">Solekia Limited</span>
                         <span class="date">2/2024 - 1/2025</span>
                     </div>
-                    <div class="job-title">System Engineer / Professional Training (Japan)</div>
-                    <div class="job-desc">
+                    <div class="job-title" data-i18n="job.solekia.title">System Engineer / Professional Training (Japan)
+                    </div>
+                    <div class="job-desc" data-i18n="job.solekia.desc">
                         <ul>
                             <li><strong>System Engineer:</strong> Developed a real estate management and sales system
                                 for Tokyo Realestate. Analyzed requirements, designed the database and architecture for
@@ -187,8 +215,8 @@
                         <span class="company">SkinProject</span>
                         <span class="date">8/2024 - 12/2024</span>
                     </div>
-                    <div class="job-title">Technical Leader</div>
-                    <div class="job-desc">
+                    <div class="job-title" data-i18n="job.skinproject.title">Technical Leader</div>
+                    <div class="job-desc" data-i18n="job.skinproject.desc">
                         <ul>
                             <li>Design and manage the website projects selling decal design files.</li>
                             <li>Back-end programming with PHP Laravel and MySQL.</li>
@@ -202,8 +230,8 @@
                         <span class="company">Ford Tan Thuan</span>
                         <span class="date">6/2023 - 8/2023</span>
                     </div>
-                    <div class="job-title">Backend Developer - Official Website</div>
-                    <div class="job-desc">
+                    <div class="job-title" data-i18n="job.ford.title">Backend Developer - Official Website</div>
+                    <div class="job-desc" data-i18n="job.ford.desc">
                         <ul>
                             <li>Back-end programming using PHP Laravel and MySQL.</li>
                             <li>Customer consulting, system design, and project management.</li>
@@ -217,8 +245,8 @@
                         <span class="company">SOLEKIA-FREESIA (Japan)</span>
                         <span class="date">10/2022 - 12/2022</span>
                     </div>
-                    <div class="job-title">Internship</div>
-                    <div class="job-desc">
+                    <div class="job-title" data-i18n="job.solekia_intern.title">Internship</div>
+                    <div class="job-desc" data-i18n="job.solekia_intern.desc">
                         <ul>
                             <li>Research and practice using Spring Boot and popular technologies in Japan.</li>
                             <li>Learn about Japanese corporate culture and working environment.</li>
@@ -232,8 +260,8 @@
                         <span class="company">Tekmedi</span>
                         <span class="date">03/2022 - 05/2022</span>
                     </div>
-                    <div class="job-title">Backend Developer - TEK-BTC Project</div>
-                    <div class="job-desc">
+                    <div class="job-title" data-i18n="job.tekmedi.title">Backend Developer - TEK-BTC Project</div>
+                    <div class="job-desc" data-i18n="job.tekmedi.desc">
                         <ul>
                             <li>Developed back-end system using C#.NET and PostgreSQL for Medical Examination
                                 Registration, Smart Queuing and Cashless Payment applications.</li>
@@ -248,8 +276,8 @@
                         <span class="company">Reiwa House</span>
                         <span class="date">3/2021 - 4/2021</span>
                     </div>
-                    <div class="job-title">Freelancer - Project Manager</div>
-                    <div class="job-desc">
+                    <div class="job-title" data-i18n="job.reiwa.title">Freelancer - Project Manager</div>
+                    <div class="job-desc" data-i18n="job.reiwa.desc">
                         <ul>
                             <li>Website consulting for customers.</li>
                             <li>Frontend and backend design.</li>
@@ -260,17 +288,20 @@
             </div>
 
             <div class="section">
-                <h3 class="section-title">Personal Projects</h3>
+                <h3 class="section-title" data-i18n="section.personal_projects">Personal Projects</h3>
 
                 <div class="project-item">
                     <div class="job-header">
                         <span class="company">Spring Boot Database Cache Starter</span>
                         <span class="date">9/2025 - 10/2025</span>
                     </div>
-                    <div class="job-desc">
+                    <div class="job-desc" data-i18n="project.cache.desc">
                         <ul>
-                            <li><strong>CacheManager Implementation:</strong> Stores cache directly in RDBMS, eliminating the need for Redis.</li>
-                            <li><strong>JPA Integration:</strong> Leverages the power of <code>spring-boot-starter-data-jpa</code> for cache management.</li>
+                            <li><strong>CacheManager Implementation:</strong> Stores cache directly in RDBMS,
+                                eliminating the need for Redis.</li>
+                            <li><strong>JPA Integration:</strong> Leverages the power of
+                                <code>spring-boot-starter-data-jpa</code> for cache management.
+                            </li>
                             <li><strong>Modern Compatibility:</strong> Fully supports Java 17+ and Spring Boot 3+.</li>
                             <li><a href="https://natswarchuan.github.io/spring-boot-database-cache-starter/"
                                     target="_blank">Project Link</a></li>
@@ -284,12 +315,14 @@
                         <span class="company">VMC Query Builder</span>
                         <span class="date">7/2025 - 8/2025</span>
                     </div>
-                    <div class="job-desc">
+                    <div class="job-desc" data-i18n="project.vmc.desc">
                         <p><em>Flexible ORM and Query Builder framework based on MyBatis for Spring Boot.</em></p>
                         <ul>
-                            <li><strong>Entity & Repository Definition:</strong> Provides robust and easily extensible structures, minimizing boilerplate code.</li>
+                            <li><strong>Entity & Repository Definition:</strong> Provides robust and easily extensible
+                                structures, minimizing boilerplate code.</li>
                             <li><strong>Dynamic SQL:</strong> Build secure and flexible queries with Fluent API.</li>
-                            <li><strong>Validation & Relations:</strong> Supports data validation directly on DTOs and efficiently manages complex relationships.
+                            <li><strong>Validation & Relations:</strong> Supports data validation directly on DTOs and
+                                efficiently manages complex relationships.
                             </li>
                             <li><a href="https://natswarchuan.github.io/vmc-query-builder/" target="_blank">Project
                                     Link</a></li>
@@ -303,7 +336,7 @@
                         <span class="company">Nihongo no Jisho</span>
                         <span class="date">4/2024 - 5/2024</span>
                     </div>
-                    <div class="job-desc">
+                    <div class="job-desc" data-i18n="project.nihongo.desc">
                         <ul>
                             <li>Built an online Japanese learning dictionary integrating GeminiAI tool.</li>
                             <li>Developed the entire system using JavaScript, focusing on improving user experience in
@@ -320,11 +353,13 @@
                         <span class="company">JPA Spring Boot Generic Service</span>
                         <span class="date">9/2022 - 12/2022</span>
                     </div>
-                    <div class="job-desc">
+                    <div class="job-desc" data-i18n="project.generic.desc">
                         <ul>
-                            <li><strong>Accelerated Development:</strong> Optimizes CRUD processes and reduces boilerplate code.</li>
+                            <li><strong>Accelerated Development:</strong> Optimizes CRUD processes and reduces
+                                boilerplate code.</li>
                             <li><strong>DTO Automation:</strong> Supports automatic DTO Mapping for cleaner code.</li>
-                            <li><strong>RESTful Standards:</strong> Built-in support for standardized Dynamic Filtering and Pagination.</li>
+                            <li><strong>RESTful Standards:</strong> Built-in support for standardized Dynamic Filtering
+                                and Pagination.</li>
                             <li><a href="https://natswarchuan.github.io/jpa-spring-boot-generic-service/"
                                     target="_blank">Project Link</a></li>
                         </ul>
@@ -337,8 +372,8 @@
                         <span class="company">Graduation Project (Class Project)</span>
                         <span class="date">8/2021 - 12/2021</span>
                     </div>
-                    <div class="job-title">Team Manager</div>
-                    <div class="job-desc">
+                    <div class="job-title" data-i18n="project.grad.title">Team Manager</div>
+                    <div class="job-desc" data-i18n="project.grad.desc">
                         <ul>
                             <li>Design and process back-end data and design flow data on front-end data according to the
                                 microservices model with the theme of an e-commerce site (Tiki, Lazada...).</li>
@@ -352,7 +387,8 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="public/js/translations.js"></script>
+    <script src="public/js/main.js"></script>
 
 </body>
 
