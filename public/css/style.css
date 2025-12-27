@@ -79,6 +79,19 @@ body {
     font-size: 0.95em;
 }
 
+/* Sub-skill list styles */
+.sub-skill-list {
+    list-style: circle;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.sub-skill-list li {
+    margin-bottom: 3px;
+    font-size: 0.9em;
+    color: #444;
+}
+
 
 .main-content {
     padding: 40px;
@@ -196,7 +209,33 @@ body {
 
 .container.pdf-export {
     width: 100% !important;
-    max-width: 800px !important; /* Fits standard A4/Letter better */
+    max-width: 800px !important;
     margin: 0 !important;
     box-shadow: none !important;
+}
+
+/* Job Metadata Styles */
+.job-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 8px 0 12px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.9em;
+}
+
+.job-metadata-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.job-metadata-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.job-metadata-value {
+    color: #333;
 }
