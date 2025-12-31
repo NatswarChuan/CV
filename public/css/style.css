@@ -47,13 +47,23 @@ body {
 }
 
 .resume-wrapper {
-    display: grid;
-    grid-template-columns: var(--sidebar-width) 1fr;
+    display: grid !important;
+    grid-template-columns: var(--sidebar-width) 1fr !important;
     background: var(--white);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    min-height: 1400px; /* Standard A4ish proportion */
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Ensure sidebar and main-content use grid on web */
+.sidebar {
+    display: block !important;
+}
+
+.main-content {
+    display: block !important;
 }
 
 /* Floating Actions */
@@ -147,13 +157,19 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--accent);
-    margin-bottom: 1.2rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.profile {
+    text-align: center;
+    padding: 1.5rem 1rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .sidebar-sections section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .contact-list {
@@ -237,22 +253,70 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
+/* Skill Badges */
+.skill-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    margin-left: 0.3rem;
+    background: rgba(49, 130, 206, 0.2);
+    color: var(--accent);
+    border-radius: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(49, 130, 206, 0.3);
+}
+
+/* Tech Stack Chips */
+.tech-chips {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-chip {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.tech-chip:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Tech-specific colors */
+.tech-chip.java { background: #ebf8ff; color: #2c5282; border: 1px solid #3182ce; }
+.tech-chip.php { background: #faf5ff; color: #553c9a; border: 1px solid #805ad5; }
+.tech-chip.javascript { background: #fffaf0; color: #c05621; border: 1px solid #f6ad55; }
+.tech-chip.spring { background: #f0fff4; color: #276749; border: 1px solid #48bb78; }
+.tech-chip.laravel { background: #fff5f5; color: #c53030; border: 1px solid #fc8181; }
+.tech-chip.mysql { background: #fff5e1; color: #c05621; border: 1px solid #ed8936; }
+.tech-chip.redis { background: #fff5f5; color: #c53030; border: 1px solid #e53e3e; }
+.tech-chip.vue { background: #f0fff4; color: #22543d; border: 1px solid #48bb78; }
+.tech-chip.docker { background: #ebf8ff; color: #2c5282; border: 1px solid #4299e1; }
+.tech-chip.default { background: #f7fafc; color: #4a5568; border: 1px solid #cbd5e0; }
+
 /* Main Content Styling */
 .main-content {
     background: var(--white);
-    padding: 3.5rem 3rem;
+    padding: 1.5rem 2rem;
 }
 
 .resume-section {
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -268,8 +332,8 @@ body {
 }
 
 .summary-content {
-    font-size: 1.05rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.6;
     color: var(--text-main);
 }
 
@@ -282,7 +346,7 @@ body {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .timeline-item::before {
@@ -331,11 +395,29 @@ body {
 
 .job-meta {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 0.8rem;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
     font-size: 0.85rem;
     color: var(--text-muted);
 }
+
+.meta-item {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.meta-item strong {
+    color: var(--text-main);
+    font-size: 0.80rem;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.meta-item span {
+    display: inline;
+}
+
 
 .job-details ul {
     list-style: none;
@@ -415,10 +497,16 @@ body {
 
 .project-meta {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
     font-size: 0.8rem;
     margin-bottom: 1rem;
+}
+
+.project-meta .meta-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
 }
 
 .project-meta .role {
@@ -426,6 +514,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
 }
+
 
 .project-desc {
     font-size: 0.9rem;
@@ -452,19 +541,115 @@ body {
 }
 
 @media print {
+    /* Strict A4 page setup with scaling */
+    @page {
+        size: A4;
+        margin: 15mm 10mm;
+    }
+    
+    /* Force color printing for sidebar */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+    
+    /* Scale down entire content to fit more on page */
     body {
         background: white;
         padding: 0;
+        margin: 0;
+        zoom: 0.85; /* Scale down to fit more content */
+        -moz-transform: scale(0.85);
+        -moz-transform-origin: 0 0;
     }
+    
     .app-container {
         margin: 0;
         max-width: 100%;
+        padding: 0;
     }
+    
     .resume-wrapper {
-        box-shadow: none;
-        grid-template-columns: var(--sidebar-width) 1fr;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
-    .floating-nav {
-        display: none;
+    
+    /* Preserve sidebar background */
+    .sidebar {
+        background-color: var(--primary) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        padding: 1rem 0.8rem !important;
+    }
+    
+    .main-content {
+        padding: 1rem 1.5rem !important;
+    }
+    
+    /* Reduce font sizes for print */
+    .section-title {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.6rem !important;
+    }
+    
+    .summary-content {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .timeline-item {
+        margin-bottom: 1rem !important;
+    }
+    
+    .job-title, .project-title {
+        font-size: 1rem !important;
+    }
+    
+    .job-details, .project-desc {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Prevent page breaks inside critical elements only */
+    .timeline-item,
+    .project-card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    /* Ensure proper spacing for print */
+    .timeline-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-card {
+        margin-bottom: 1rem;
+    }
+    
+    /* A4 specific adjustments */
+    @page {
+        size: A4;
+        margin: 10mm 0;
+    }
+    
+    /* Optimize font rendering for PDF */
+    body {
+        font-size: 14px;
+    }
+    
+    /* Ensure links are visible */
+    a {
+        text-decoration: underline;
+    }
+    
+    /* Maintain tech chip colors */
+    .tech-chip,
+    .skill-badge {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 }

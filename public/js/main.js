@@ -1,10 +1,58 @@
 
 let currentLang = localStorage.getItem('cv_lang') || 'en';
 
+// Convert tech stack strings into colorful chips
+function convertStackToChips(stackText) {
+    if (!stackText) return '';
+
+    const techColorMap = {
+        'java': 'java',
+        'php': 'php',
+        'javascript': 'javascript',
+        'js': 'javascript',
+        'vue': 'vue',
+        'spring': 'spring',
+        'laravel': 'laravel',
+        'mysql': 'mysql',
+        'redis': 'redis',
+        'docker': 'docker',
+        'node': 'javascript'
+    };
+
+    const techs = stackText.split(',').map(t => t.trim());
+    const chips = techs.map(tech => {
+        const techLower = tech.toLowerCase();
+        let colorClass = 'default';
+
+        // Find matching color
+        for (const [key, value] of Object.entries(techColorMap)) {
+            if (techLower.includes(key)) {
+                colorClass = value;
+                break;
+            }
+        }
+
+        return `<span class="tech-chip ${colorClass}">${tech}</span>`;
+    });
+
+    return `<div class="tech-chips">${chips.join('')}</div>`;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     updateContent();
+    initializeTechChips();
 });
+
+function initializeTechChips() {
+    // Convert all .stack elements to chips
+    document.querySelectorAll('.job-meta .stack, .project-meta .stack').forEach(element => {
+        const stackText = element.textContent.trim();
+        if (stackText && !element.querySelector('.tech-chips')) {
+            element.innerHTML = convertStackToChips(stackText);
+        }
+    });
+}
+
 
 function changeLanguage() {
     currentLang = currentLang === 'en' ? 'vi' : 'en';
@@ -43,27 +91,26 @@ function updateContent() {
     }
 
     document.documentElement.lang = currentLang;
+
+    // Re-initialize tech chips after content update
+    setTimeout(() => initializeTechChips(), 100);
 }
+
 
 function exportPDF() {
-    const element = document.querySelector('.resume-wrapper');
-    const isVietnamese = currentLang === 'vi';
+    // Use browser's native print dialog
+    // User will need to select "Save as PDF" and set proper settings
 
-    const opt = {
-        margin: 0,
-        filename: isVietnamese ? 'CV_VuMinhChuan_VN.pdf' : 'CV_VuMinhChuan.pdf',
-        image: { type: 'jpeg', quality: 1 },
-        html2canvas: {
-            scale: 2,
-            useCORS: true,
-            letterRendering: true,
-            scrollX: 0,
-            scrollY: 0
-        },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-    };
+    // Hide buttons before printing
+    const buttons = document.querySelectorAll('.no-print, .floating-nav');
+    buttons.forEach(btn => btn.style.display = 'none');
 
-    // Use a clone to avoid flickering on the main UI
-    html2pdf().set(opt).from(element).save();
+    // Trigger print dialog
+    window.print();
+
+    // Show buttons again after print dialog closes
+    setTimeout(() => {
+        buttons.forEach(btn => btn.style.display = '');
+    }, 100);
 }
+
