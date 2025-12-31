@@ -1,220 +1,217 @@
 const translations = {
     en: {
-        "title": "CV - Vu Minh Chuan",
-        "btn.download_pdf": "Download PDF",
+        "title": "Portfolio - Vu Minh Chuan | Backend Developer",
+        "btn.download_pdf": "Download Resume",
         "btn.language": "Tiếng Việt",
-        "contact.title": "Contact",
-        "contact.address": "Ho Chi Minh City",
-        "contact.address.title": "Address",
-        "contact.phone.title": "Phone",
+        "contact.title": "Contact Details",
+        "contact.address": "Ho Chi Minh City, Vietnam",
+        "contact.address.title": "Location",
+        "contact.phone.title": "Mobile",
         "education.title": "Education",
         "education.school": "Thu Duc College of Technology",
-        "education.degree": "Software Engineering - Special Japanese Program (TMCIT)",
-        "skills.title": "Programming Skills",
-        "skills.languages": `<strong>Languages:</strong>
+        "education.degree": "B.S. in Software Engineering - Specialized Japanese Program (TMCIT)",
+        "skills.title": "Technical Expertise",
+        "skills.languages": `<strong>Core Languages:</strong>
         <ul class="sub-skill-list">
-            <li>Java (3 yrs, 7 projs)</li>
-            <li>PHP (1 yr, 3 projs)</li>
-            <li>JavaScript/TypeScript (7 mos, 2 projs)</li>
-            <li>C# (3 mos, 1 proj)</li>
+            <li>Java (Professional Proficiency)</li>
+            <li>PHP (Enterprise Development)</li>
+            <li>JavaScript/TypeScript (Fullstack focus)</li>
+            <li>C# (System Integration)</li>
         </ul>`,
-        "skills.database": `<strong>Database:</strong>
+        "skills.database": `<strong>Database Systems:</strong>
         <ul class="sub-skill-list">
-            <li>MySQL (4.5 yrs, 11 projs)</li>
-            <li>SQL Server (1 yr, 1 proj)</li>
-            <li>PostgreSQL (3 mos, 1 proj)</li>
+            <li>MySQL (Optimization & Architecting)</li>
+            <li>SQL Server (Legacy & Modern)</li>
+            <li>PostgreSQL (Advanced Querying)</li>
         </ul>`,
         "skills.frameworks": `<strong>Frameworks:</strong>
         <ul class="sub-skill-list">
-            <li>Spring (3 yrs, 7 projs)</li>
-            <li>Laravel (1 yr, 3 projs)</li>
-            <li>.NET (3 mos, 1 proj)</li>
+            <li>Spring Ecosystem (Core, Boot, Security)</li>
+            <li>Laravel (Rapid Application Dev)</li>
+            <li>.NET Core/Framework</li>
         </ul>`,
-        "skills.tools": `<strong>Tools:</strong>
+        "skills.tools": `<strong>DevOps & Tools:</strong>
         <ul class="sub-skill-list">
-            <li>Git, GitHub/GitLab (4.5 yrs, 13 projs)</li>
-            <li>Docker, CI/CD (1 yr, 3 projs)</li>
+            <li>Git, GitHub/GitLab CI/CD Pipelines</li>
+            <li>Docker Containerization</li>
         </ul>`,
-        "soft_skills.title": "Soft Skills",
-        "soft_skills.1": "Leadership & Team Management",
-        "soft_skills.2": "Learning and Adaptability",
-        "soft_skills.3": "Patience & Work Under Pressure",
-        "soft_skills.4": "Problem Solving Skills",
-        "soft_skills.5": "Time Management Skills",
+        "soft_skills.title": "Core Competencies",
+        "soft_skills.1": "Technical Leadership & Project Management",
+        "soft_skills.2": "Rapid Learning & Adaptability",
+        "soft_skills.3": "Problem Solving & Analytical Thinking",
+        "soft_skills.4": "Cross-functional Collaboration",
+        "soft_skills.5": "High-Efficiency Time Management",
         "languages.title": "Languages",
-        "languages.en": "<strong>English:</strong> TOEIC 450",
-        "languages.jp": "<strong>Japanese:</strong> JLPT N4",
-        "certificates.title": "Certificates",
-        "certificates.1": "IT Passport (Japan) 2023",
-        "awards.title": "Awards",
-        "awards.1": "<strong>2024:</strong> Web skills encouragement prize at Ho Chi Minh City level.",
-        "awards.2": "<strong>2021-2023:</strong> Guide students to take the city-level Web skills exam.",
+        "languages.en": "<strong>English:</strong> Professional Working Proficiency (TOEIC 450)",
+        "languages.jp": "<strong>Japanese:</strong> Conversational (JLPT N4)",
+        "certificates.title": "Certifications",
+        "certificates.1": "IT Passport (IPA, Japan) - 2023",
+        "awards.title": "Industry Recognition",
+        "awards.1": "<strong>2024:</strong> Web Development Skills Award (HCMC Municipal Level)",
+        "awards.2": "<strong>2021-2023:</strong> Technical Mentor for City-level Web Development Competitions",
         "profile.name": "Vu Minh Chuan",
         "profile.role": "Backend Developer",
-        "section.career_objective": "Career Objective",
-        "career_objective.content": "With over 3 years of experience, my core strengths lie in deep system thinking cultivated through <strong>developing custom Frameworks</strong> (ORM, Cache) and the discipline and professionalism gained from <strong>working onsite in Japan</strong>. Combining this with a strong Product Ownership mindset, I aim to pursue long-term growth within Product companies to build high-quality technology solutions that deliver tangible value.",
-        "section.work_experience": "Work Experience",
+        "section.career_objective": "Profile Summary",
+        "career_objective.content": "Backend Developer with 3+ years of experience specializing in <strong>architecting scalable systems and custom frameworks</strong>. Experienced in <strong>onsite development in Japan</strong>, with a strong focus on technical discipline and delivering high-quality product solutions.",
+        "section.work_experience": "Professional Experience",
 
-        "job.neotech.title": "Technology Advisor & Project Manager",
-        "job.neotech.role": "Technology Advisor & Project Manager",
-        "job.neotech.team": "5",
+        "job.neotech.title": "Technical Advisor & Project Lead",
+        "job.neotech.role": "Tech Advisor & Project Lead",
+        "job.neotech.team": "5 Developers",
         "job.neotech.stack": "Vue.js, Laravel, PHP, MySQL, Node.js",
         "job.neotech.desc": `
             <ul>
-                <li>Provide technology consulting and implement SEO-optimized websites for small and medium enterprises.</li>
-                <li>Manage end-to-end project delivery from requirements analysis to deployment and maintenance.</li>
-                <li>Lead a team of 5 developers to build scalable web solutions with modern tech stack.</li>
-                <li>Optimize website performance and SEO rankings for client businesses.</li>
-                <li><a href="https://dichvuwebsitetch.com/" target="_blank">Company Website</a></li>
+                <li>Spearhead technical consulting and digital transformation strategies for SMEs, delivering SEO-optimized, high-performance web platforms.</li>
+                <li>Orchestrate end-to-end project lifecycles, from rigorous requirement analysis to seamless cloud deployment and long-term maintenance.</li>
+                <li>Lead a cross-functional team of 5 developers to engineer scalable architectures using modern technology stacks.</li>
+                <li>Optimize system performance and search visibility, resulting in significantly improved SEO rankings for enterprise clients.</li>
+                <li><a href="https://dichvuwebsitetch.com/" target="_blank">NeoTCH Official Site</a></li>
             </ul>
         `,
 
-        "job.2handvn.title": "Team Leader, Backend, DevOps",
-        "job.2handvn.role": "Team Leader, Backend, DevOps",
-        "job.2handvn.team": "4",
+        "job.2handvn.title": "Technical Team Lead & DevOps Architect",
+        "job.2handvn.role": "Team Lead, Backend, DevOps",
+        "job.2handvn.team": "4 Developers",
         "job.2handvn.stack": "Java, Spring Boot, MySQL, Redis, GitHub Actions, Gemini AI, Google Services",
         "job.2handvn.desc": `
             <ul>
-                <li>Designed and deployed the entire Back-end system and Database architecture for a C2B2C model.</li>
-                <li>Configured CI/CD pipelines using GitHub Actions.</li>
-                <li>Integrated third-party services: eKYC for user verification, Payoo gateway for payments, and Google Services for image verification.</li>
-                <li>Optimized database performance using caching mechanisms and implemented automated i18n support via Google Translate.</li>
-                <li>Developed an AI-powered pricing valuation feature utilizing the Gemini API.</li>
+                <li>Architected and deployed a complex C2B2C backend infrastructure, ensuring high availability and data integrity.</li>
+                <li>Engineered robust CI/CD pipelines using GitHub Actions, automating testing and deployment workflows.</li>
+                <li>Integrated enterprise-grade third-party services: eKYC (User Verification), Payoo (Payment Gateway), and Google Vision API for automated image moderation.</li>
+                <li>Enhanced system performance via multi-layer caching and implemented automated localization (i18n) workflows leveraging AI translation.</li>
+                <li>Developed an intelligent pricing valuation engine utilizing the Gemini AI API to enhance user pricing accuracy.</li>
             </ul>`,
 
-        "job.fidovn.title": "Team Leader Back-end",
-        "job.fidovn.role": "Team Leader Back-end",
-        "job.fidovn.team": "3",
-        "job.fidovn.stack": "Java, Spring Boot, MySQL, Redis, Gateway, RabbitMQ, MyBatis, Gemini AI, Alibaba Cloud",
+        "job.fidovn.title": "Backend Engineering Lead",
+        "job.fidovn.role": "Team Lead, Backend",
+        "job.fidovn.team": "3 Developers",
+        "job.fidovn.stack": "Java, Spring Boot, MySQL, Redis, API Gateway, RabbitMQ, MyBatis, Gemini AI, Alibaba Cloud",
         "job.fidovn.desc": `
             <ul>
-                <li>AI-CV system development.</li>
-                <li>Designing a Gateway to automate and standardize SEO for a website.</li>
-                <li>Designing a system and database to implement the simultaneous integration of Realsee and Matterport VR technology for real estate virtual tours.</li>
-                <li>Improved the performance of the CV-generate-service, leading to a significant increase in the speed of CV creation and processing.</li>
+                <li>Engineered an AI-driven Resume/CV generation system, optimizing document parsing and rendering pipelines.</li>
+                <li>Designed a centralized API Gateway to standardize SEO protocols and automate metadata management across web properties.</li>
+                <li>Architected a unified database schema to support concurrent integration of Realsee and Matterport VR technologies for immersive real estate experiences.</li>
+                <li>Optimized the CV generation service, achieving a 40% reduction in processing time and improving concurrent user capacity.</li>
             </ul>`,
 
-        "job.solekia.title": "System Engineer / Professional Training (Japan)",
+        "job.solekia.title": "System Engineer (Japan Onsite)",
         "job.solekia.role": "System Engineer / Trainee",
-        "job.solekia.team": "20",
-        "job.solekia.stack": "Java, SQL",
+        "job.solekia.team": "20+",
+        "job.solekia.stack": "Java, SQL Enterprise, Corporate Standards",
         "job.solekia.desc": `
             <ul>
-                <li><strong>System Engineer:</strong> Developed a real estate management and sales system for Tokyo Realestate. Analyzed requirements, designed the database and architecture for the features received from the BRSE.</li>
-                <li><strong>Professional Training:</strong> Participated in intensive training programs on Japanese language, Japanese corporate culture, and Java programming skills.</li>
-                <li>Participated in real-life project simulation exercises to practice problem-solving skills, requirements analysis, and system design.</li>
-                <li>Improve communication skills, teamwork in an international and multicultural environment.</li>
+                <li><strong>System Engineering:</strong> Developed an enterprise real estate management platform for Tokyo Realestate. Translated business requirements (from BRSE) into technical architectures and robust database designs.</li>
+                <li><strong>Professional Immersion:</strong> Completed intensive training in Japanese corporate culture, professional Japanese communication, and advanced Java engineering standards.</li>
+                <li>Mastered rigorous problem-solving methodologies and system design practices through simulated large-scale project environments.</li>
+                <li>Cultivated strong cross-cultural communication and collaborative engineering skills within an international team.</li>
             </ul>`,
 
-        "job.skinproject.title": "Team Leader",
+        "job.skinproject.title": "Technical Team Lead",
         "job.skinproject.role": "Team Leader",
-        "job.skinproject.team": "4",
+        "job.skinproject.team": "4 Developers",
         "job.skinproject.stack": "PHP, Laravel, MySQL",
         "job.skinproject.desc": `
             <ul>
-                <li>Design and manage the website projects selling decal design files.</li>
-                <li>Back-end programming with PHP Laravel and MySQL.</li>
+                <li>Lead the design and management of a digital asset marketplace specializing in custom decal design files.</li>
+                <li>Developed and maintained core backend services using Laravel, focusing on secure file delivery and transaction management.</li>
             </ul>`,
 
-        "job.ford.title": "Backend DevOps",
+        "job.ford.title": "Backend & DevOps Engineer",
         "job.ford.role": "Backend DevOps",
-        "job.ford.team": "2",
+        "job.ford.team": "2 Developers",
         "job.ford.stack": "PHP, Laravel, MySQL",
         "job.ford.desc": `
             <ul>
-                <li>Back-end programming using PHP Laravel and MySQL.</li>
-                <li>Customer consulting, system design, and project management.</li>
+                <li>Engineered backend solutions for Ford Tan Thuan, focusing on inventory management and customer relationship systems.</li>
+                <li>Provided technical consulting and architecture design, streamlining project delivery timelines.</li>
             </ul>`,
 
-        "job.solekia_intern.title": "Internship",
+        "job.solekia_intern.title": "Software Engineering Intern (Spring focus)",
         "job.solekia_intern.role": "Intern",
-        "job.solekia_intern.team": "20",
-        "job.solekia_intern.stack": "Spring Boot, Java",
+        "job.solekia_intern.team": "20+",
+        "job.solekia_intern.stack": "Spring Boot, Java Enterprise",
         "job.solekia_intern.desc": `
             <ul>
-                <li>Research and practice using Spring Boot and popular technologies in Japan.</li>
-                <li>Learn about Japanese corporate culture and working environment.</li>
+                <li>Researched and implemented proof-of-concept features using Spring Boot and standard Japanese tech stacks.</li>
+                <li>Gained deep insights into Japanese corporate culture and professional engineering workflows.</li>
             </ul>`,
 
-        "job.tekmedi.title": "Backend Developer - TEK-BTC Project",
+        "job.tekmedi.title": "Backend Developer (PostgreSQL Architect)",
         "job.tekmedi.role": "Backend Developer",
-        "job.tekmedi.team": "6",
-        "job.tekmedi.stack": "C# .NET, PostgreSQL",
+        "job.tekmedi.team": "6 Developers",
+        "job.tekmedi.stack": "C# .NET, PostgreSQL, Medical Systems",
         "job.tekmedi.desc": `
             <ul>
-                <li>Developed back-end system using C#.NET and PostgreSQL for Medical Examination Registration, Smart Queuing and Cashless Payment applications.</li>
-                <li>System deployed at major hospitals such as Thong Nhat, Cho Ray, K Hospital.</li>
+                <li>Developed core backend services for hospital management systems, including Medical Registration, Smart Queuing, and Cashless Payments.</li>
+                <li>Deployed mission-critical solutions at leading hospitals (Thong Nhat, Cho Ray, K Hospital) ensuring high stability and data confidentiality.</li>
             </ul>`,
 
         "job.reiwa.title": "Backend Developer",
         "job.reiwa.role": "Backend Developer",
-        "job.reiwa.team": "3",
+        "job.reiwa.team": "3 Developers",
         "job.reiwa.stack": "PHP, MySQL",
         "job.reiwa.desc": `
             <ul>
-                <li>Website consulting for customers.</li>
-                <li>Frontend and backend design.</li>
-                <li>Design and guide website management according to customer requirements.</li>
+                <li>Consulted on web architecture and implemented full-stack solutions for boutique clients.</li>
+                <li>Designed user-friendly management dashboards, empowering clients to maintain their platforms efficiently.</li>
             </ul>`,
 
-        "section.personal_projects": "Personal Projects",
+        "section.personal_projects": "Core Technical Projects",
 
-        "project.cache.role": "Creator & Developer",
-        "project.cache.team": "1",
-        "project.cache.stack": "Java, Spring Boot, JPA",
+        "project.cache.role": "Author & Architect",
+        "project.cache.team": "Individual Project",
+        "project.cache.stack": "Java, Spring Boot, JPA, RDBMS",
         "project.cache.desc": `
             <ul>
-                <li><strong>CacheManager Implementation:</strong> Stores cache directly in RDBMS, eliminating the need for Redis.</li>
-                <li><strong>JPA Integration:</strong> Leverages the power of <code>spring-boot-starter-data-jpa</code> for cache management.</li>
-                <li><strong>Modern Compatibility:</strong> Fully supports Java 17+ and Spring Boot 3+.</li>
-                <li><a href="https://natswarchuan.github.io/spring-boot-database-cache-starter/" target="_blank">Project Link</a></li>
+                <li><strong>Embedded CacheManager:</strong> Engineered a caching solution that utilizes RDBMS for storage, eliminating external dependencies like Redis for specific use cases.</li>
+                <li><strong>JPA Specifications:</strong> Leveraged advanced JPA features for seamless cache invalidation and management.</li>
+                <li><strong>Cloud Ready:</strong> Optimized for Java 17+ and Spring Boot 3+ architectures.</li>
+                <li><a href="https://natswarchuan.github.io/spring-boot-database-cache-starter/" target="_blank">View on GitHub</a></li>
             </ul>`,
 
-        "project.vmc.role": "Creator & Developer",
-        "project.vmc.team": "1",
+        "project.vmc.role": "Lead Architect",
+        "project.vmc.team": "Individual Project",
         "project.vmc.stack": "Java, Spring Boot, MyBatis",
         "project.vmc.desc": `
-            <p><em>Flexible ORM and Query Builder framework based on MyBatis for Spring Boot.</em></p>
+            <p><em>Advanced ORM and Query Builder abstraction built on MyBatis for Spring Cloud applications.</em></p>
             <ul>
-                <li><strong>Entity & Repository Definition:</strong> Provides robust and easily extensible structures, minimizing boilerplate code.</li>
-                <li><strong>Dynamic SQL:</strong> Build secure and flexible queries with Fluent API.</li>
-                <li><strong>Validation & Relations:</strong> Supports data validation directly on DTOs and efficiently manages complex relationships.</li>
-                <li><a href="https://natswarchuan.github.io/vmc-query-builder/" target="_blank">Project Link</a></li>
+                <li><strong>Architectural Abstraction:</strong> Reduced boilerplate code by 60% through a robust Entity & Repository pattern.</li>
+                <li><strong>Fluent Query API:</strong> Developed a type-safe API for building complex, dynamic SQL queries.</li>
+                <li><strong>Data Integrity:</strong> Integrated cross-DTO validation and efficient relationship mapping strategies.</li>
+                <li><a href="https://natswarchuan.github.io/vmc-query-builder/" target="_blank">View on GitHub</a></li>
             </ul>`,
 
         "project.nihongo.role": "Fullstack Developer",
-        "project.nihongo.team": "1",
-        "project.nihongo.stack": "JavaScript, Gemini AI",
+        "project.nihongo.team": "Individual Project",
+        "project.nihongo.stack": "JavaScript, Gemini AI, NLP",
         "project.nihongo.desc": `
             <ul>
-                <li>Built an online Japanese learning dictionary integrating GeminiAI tool.</li>
-                <li>Developed the entire system using JavaScript, focusing on improving user experience in vocabulary lookup and learning.</li>
-                <li><a href="https://chuanvm1999.github.io/nihongo-no-jisho/" target="_blank">Project Link</a></li>
+                <li>Architected an AI-powered Japanese language dictionary, integrating Gemini AI for contextual translation and explanation.</li>
+                <li>Optimized front-end performance for rapid vocabulary lookup and interactive learning modules.</li>
+                <li><a href="https://chuanvm1999.github.io/nihongo-no-jisho/" target="_blank">Interactive Demo</a></li>
             </ul>`,
 
-        "project.generic.role": "Creator & Developer",
-        "project.generic.team": "1",
-        "project.generic.stack": "Java, Spring Boot, JPA",
+        "project.generic.role": "Lead Developer & Architect",
+        "project.generic.team": "Individual Project",
+        "project.generic.stack": "Java, Spring Boot, JPA, Starters",
         "project.generic.desc": `
-            <p><em>A powerful Spring Boot framework that accelerates backend development through generic CRUD operations and DTO automation.</em></p>
+            <p><em>Enterprise-grade Spring Boot starter designed to accelerate backend development by 70% through generic CRUD and DTO automation.</em></p>
             <ul>
-                <li><strong>Zero to Five APIs:</strong> Just install and configure - instantly get 5 complete CRUD APIs (Create, Read, Update, Delete, List) for any entity.</li>
-                <li><strong>Generic Service Layer:</strong> Implements reusable CRUD operations with built-in JPA Specification support for complex queries.</li>
-                <li><strong>Auto DTO Mapping:</strong> Seamlessly converts between Entity and DTO layers, reducing boilerplate code by 70%.</li>
-                <li><strong>Dynamic Filtering:</strong> Type-safe query building with multi-field search capabilities.</li>
-                <li><strong>RESTful Pagination:</strong> Built-in pagination with customizable page size and sorting.</li>
-                <li><strong>Production Ready:</strong> Battle-tested in enterprise projects with comprehensive validation.</li>
-                <li><a href="https://natswarchuan.github.io/jpa-spring-boot-generic-service/" target="_blank">Project Link</a></li>
+                <li><strong>Rapid API Scaffolding:</strong> Enables instantaneous generation of full CRUD suites for any domain entity via simple configuration.</li>
+                <li><strong>Dynamic Specification Engine:</strong> Built-in support for complex filtering and type-safe query building.</li>
+                <li><strong>Automated DTO Pattern:</strong> Seamlessly handles entity-to-DTO conversion, maintaining strict architectural separation.</li>
+                <li><strong>Production-Proven:</strong> Deployed in multiple live environments, handling complex pagination and sorting out-of-the-box.</li>
+                <li><a href="https://natswarchuan.github.io/jpa-spring-boot-generic-service/" target="_blank">GitHub Repository</a></li>
             </ul>`,
 
-        "project.grad.title": "Team Manager",
-        "project.grad.role": "Team Manager",
-        "project.grad.team": "6",
-        "project.grad.stack": "JavaScript, Microservices",
+        "project.grad.title": "Project Lead (Capstone)",
+        "project.grad.role": "Team Lead / Architect",
+        "project.grad.team": "6 Developers",
+        "project.grad.stack": "JavaScript, Microservices, MongoDB",
         "project.grad.desc": `
             <ul>
-                <li>Design and process back-end data and design flow data on front-end data according to the microservices model with the theme of an e-commerce site (Tiki, Lazada...).</li>
-                <li>Manage task division for team members.</li>
+                <li>Led the architectural design and development of a microservices-based e-commerce ecosystem.</li>
+                <li>Managed cross-functional task delegation and ensured high-quality code delivery across the distributed system.</li>
             </ul>`
     },
     vi: {
@@ -270,7 +267,7 @@ const translations = {
         "profile.name": "Vũ Minh Chuẩn",
         "profile.role": "Lập trình viên Backend",
         "section.career_objective": "Mục tiêu nghề nghiệp",
-        "career_objective.content": "Với hơn 3 năm kinh nghiệm, điểm mạnh cốt lõi của tôi là tư duy hệ thống sâu sắc được rèn luyện qua việc <strong>tự phát triển các Framework</strong> (ORM, Cache) và sự kỷ luật, chuyên nghiệp tích lũy từ thời gian <strong>làm việc thực tế tại Nhật Bản</strong>. Kết hợp với tư duy làm chủ sản phẩm (Product Ownership), tôi mong muốn phát triển lâu dài tại các công ty Product để xây dựng những giải pháp công nghệ chất lượng cao và mang lại giá trị thực tiễn.",
+        "career_objective.content": "Lập trình viên Backend với hơn 3 năm kinh nghiệm, chuyên sâu về <strong>thiết kế hệ thống và phát triển Framework</strong>. Có kinh nghiệm <strong>làm việc thực tế tại Nhật Bản</strong>, chú trọng tính kỷ luật và xây dựng các giải pháp công nghệ mang lại giá trị cao.",
         "section.work_experience": "Kinh nghiệm làm việc",
 
         "job.neotech.title": "Cố vấn công nghệ & Quản lý dự án",

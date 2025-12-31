@@ -4,688 +4,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Vu Minh Chuan</title>
+    <title data-i18n="title">Portfolio - Vu Minh Chuan | Backend Developer</title>
 
+    <!-- Meta Tags -->
     <meta name="description"
-        content="CV of Vu Minh Chuan - Backend Developer specializing in C#, PHP, Java, .NET, Laravel, and Spring. Experienced in system design, database architecture, and cloud integration.">
+        content="Vu Minh Chuan - Backend Developer specialized in Java, PHP, and System Architecture. Experienced in building scalable frameworks and onsite work in Japan.">
     <meta name="keywords"
-        content="Vu Minh Chuan, Backend Developer, Software Engineer, CV, Resume, C#, PHP, Java, .NET, Laravel, Spring Boot, Ho Chi Minh City, NatswarChuan">
-    <meta name="author" content="NatswarChuan">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://natswarchuan.github.io/CV/">
+        content="Vu Minh Chuan, Backend Developer, Java, PHP, Spring Boot, Laravel, Japan Onsite, System Architecture">
+    <meta name="author" content="Vu Minh Chuan">
+    <meta name="theme-color" content="#1a202c">
 
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://natswarchuan.github.io/CV/">
-    <meta property="og:title" content="CV - Vu Minh Chuan | Backend Developer">
-    <meta property="og:description"
-        content="Professional CV of Vu Minh Chuan, a Backend Developer with expertise in building scalable systems using .NET, Laravel, and Spring.">
-    <meta property="og:image" content="https://natswarchuan.github.io/CV/public/assets/avatar.jpg">
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://natswarchuan.github.io/CV/">
-    <meta property="twitter:title" content="CV - Vu Minh Chuan | Backend Developer">
-    <meta property="twitter:description"
-        content="Professional CV of Vu Minh Chuan, a Backend Developer with expertise in building scalable systems using .NET, Laravel, and Spring.">
-    <meta property="twitter:image" content="https://natswarchuan.github.io/CV/public/assets/avatar.jpg">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="icon" type="image/jpeg" href="public/assets/logo.jpeg">
 
-    <meta name="theme-color" content="#ffffff">
-    <meta property="og:site_name" content="Vu Minh Chuan - CV">
-    <meta property="og:locale" content="en_US">
-
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "name": "Vu Minh Chuan",
-          "jobTitle": "Backend Developer",
-          "url": "https://natswarchuan.github.io/CV/",
-          "image": "https://natswarchuan.github.io/CV/public/assets/avatar.jpg",
-          "sameAs": [
-            "https://www.facebook.com/NatswarVMC/",
-            "https://github.com/natswarchuan",
-            "https://youtube.com/@natswar-chuan",
-            "https://gitlab.com/NatswarChuan"
-          ],
-          "knowsAbout": ["C#", "PHP", "Java", ".NET", "Laravel", "Spring", "System Design", "Database Architecture"]
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://natswarchuan.github.io/CV/",
-          "name": "NatswarChuan",
-          "url": "https://natswarchuan.github.io/CV/",
-          "logo": "https://natswarchuan.github.io/CV/public/assets/logo.jpeg"
-        }
+      "@type": "Person",
+      "name": "Vu Minh Chuan",
+      "jobTitle": "Backend Developer",
+      "url": "https://natswarchuan.github.io/CV/",
+      "image": "https://natswarchuan.github.io/CV/public/assets/avatar.jpg",
+      "sameAs": [
+        "https://github.com/natswarchuan",
+        "https://www.facebook.com/NatswarVMC/",
+        "https://gitlab.com/NatswarChuan"
       ]
     }
     </script>
-
-    <link rel="stylesheet" href="public/css/style.css">
-    <link rel="icon" type="image/jpeg" href="public/assets/logo.jpeg">
 </head>
 
 <body>
+    <div class="app-container">
+        <!-- Floating Actions -->
+        <nav class="floating-nav no-print">
+            <button id="pdf-btn" onclick="exportPDF()" class="btn-action">
+                <span data-i18n="btn.download_pdf">Download Resume</span>
+            </button>
+            <button id="lang-btn" onclick="changeLanguage()" class="btn-action btn-outline">
+                <span data-i18n="btn.language">Tiếng Việt</span>
+            </button>
+        </nav>
 
-    <div class="container">
-        <div class="lang-switch no-print">
-            <button id="pdf-btn" onclick="exportPDF()">Download PDF</button>
-            <button id="lang-btn" onclick="changeLanguage()">Tiếng Việt</button>
-        </div>
-
-        <div class="sidebar">
-
-            <div class="profile-img"></div>
-
-            <div class="contact-info">
-                <h3 data-i18n="contact.title">Contact</h3>
-                <div class="contact-item"><strong data-i18n="contact.phone.title">Phone:</strong><br>+84 908 713 697
-                </div>
-                <div class="contact-item"><strong>Email:</strong><br>natswarchuan@gmail.com</div>
-                <div class="contact-item"><strong data-i18n="contact.address.title">Address:</strong><br><span
-                        data-i18n="contact.address">Ho Chi Minh City</span></div>
-                <div class="contact-item"><strong>Facebook:</strong><br><a href="https://www.facebook.com/NatswarVMC/"
-                        target="_blank">facebook.com/NatswarVMC</a></div>
-                <div class="contact-item"><strong>Github:</strong><br><a href="https://github.com/natswarchuan"
-                        target="_blank">github.com/natswarchuan</a></div>
-                <div class="contact-item"><strong>YouTube:</strong><br><a href="https://youtube.com/@natswar-chuan"
-                        target="_blank">@natswar-chuan</a></div>
-                <div class="contact-item"><strong>Gitlab:</strong><br><a href="https://gitlab.com/NatswarChuan"
-                        target="_blank">gitlab.com/NatswarChuan</a></div>
-            </div>
-
-            <div class="education">
-                <h3 data-i18n="education.title">Education</h3>
-                <div class="edu-item">
-                    <strong data-i18n="education.school">Thu Duc College of Technology</strong><br>
-                    <span style="font-size:0.9em">2019 - 2022</span><br>
-                    <span data-i18n="education.degree">Software Engineering - Special Japanese Program (TMCIT)</span>
-                </div>
-            </div>
-
-            <div class="skills">
-                <h3 data-i18n="skills.title">Programming Skills</h3>
-                <ul class="skill-list">
-                    <li data-i18n="skills.languages"><strong>Languages:</strong>
-                        <ul class="sub-skill-list">
-                            <li>Java (3 yrs, 7 projs)</li>
-                            <li>PHP (1 yr, 3 projs)</li>
-                            <li>JavaScript/TypeScript (7 mos, 2 projs)</li>
-                            <li>C# (3 mos, 1 proj)</li>
-                        </ul>
-                    </li>
-                    <li data-i18n="skills.database"><strong>Database:</strong>
-                        <ul class="sub-skill-list">
-                            <li>MySQL (4.5 yrs, 11 projs)</li>
-                            <li>SQL Server (1 yr, 1 proj)</li>
-                            <li>PostgreSQL (3 mos, 1 proj)</li>
-                        </ul>
-                    </li>
-                    <li data-i18n="skills.frameworks"><strong>Frameworks:</strong>
-                        <ul class="sub-skill-list">
-                            <li>Spring (3 yrs, 7 projs)</li>
-                            <li>Laravel (1 yr, 3 projs)</li>
-                            <li>.NET (3 mos, 1 proj)</li>
-                        </ul>
-                    </li>
-                    <li data-i18n="skills.tools"><strong>Tools:</strong>
-                        <ul class="sub-skill-list">
-                            <li>Git, GitHub/GitLab (4.5 yrs, 13 projs)</li>
-                            <li>Docker, CI/CD (1 yr, 3 projs)</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="skills">
-                <h3 data-i18n="soft_skills.title">Soft Skills</h3>
-                <ul class="skill-list">
-                    <li data-i18n="soft_skills.1">Leadership & Team Management</li>
-                    <li data-i18n="soft_skills.2">Learning and Adaptability</li>
-                    <li data-i18n="soft_skills.3">Patience & Work Under Pressure</li>
-                    <li data-i18n="soft_skills.4">Problem Solving Skills</li>
-                    <li data-i18n="soft_skills.5">Time Management Skills</li>
-                </ul>
-            </div>
-
-            <div class="languages">
-                <h3 data-i18n="languages.title">Languages</h3>
-                <ul class="lang-list">
-                    <li data-i18n="languages.en"><strong>English:</strong> Basic communication</li>
-                    <li data-i18n="languages.jp"><strong>Japanese:</strong> Basic communication</li>
-                </ul>
-            </div>
-
-            <div class="certificates">
-                <h3 data-i18n="certificates.title">Certificates</h3>
-                <ul class="skill-list">
-                    <li data-i18n="certificates.1">IT Passport (Japan) 2023</li>
-                </ul>
-            </div>
-
-            <div class="awards">
-                <h3 data-i18n="awards.title">Awards</h3>
-                <ul class="skill-list">
-                    <li data-i18n="awards.1"><strong>2024:</strong> Web skills encouragement prize at Ho Chi Minh City
-                        level.</li>
-                    <li data-i18n="awards.2"><strong>2021-2023:</strong> Guide students to take the city-level Web
-                        skills exam.</li>
-                </ul>
-            </div>
-        </div>
-
-
-        <div class="main-content">
-            <div class="header">
-                <h1 data-i18n="profile.name">Vu Minh Chuan</h1>
-                <h2 data-i18n="profile.role">Backend Developer</h2>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title" data-i18n="section.career_objective">Career Objective</h3>
-                <p data-i18n="career_objective.content">
-                    With over 3 years of experience, my core strengths lie in deep system thinking cultivated through
-                    <strong>developing custom Frameworks</strong> (ORM, Cache) and the discipline and professionalism
-                    gained from <strong>working onsite in Japan</strong>. Combining this with a strong Product Ownership
-                    mindset, I aim to pursue long-term growth within Product companies to build high-quality technology
-                    solutions that deliver tangible value.
-                </p>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title" data-i18n="section.work_experience">Work Experience</h3>
-
-
-                <div class="job-item">
-                    <div class="job-header">
-                        <span class="company">NeoTCH Website Services</span>
-                        <span class="date">8/2025 - Present</span>
+        <div class="resume-wrapper">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <header class="profile-header">
+                    <div class="avatar-container">
+                        <img src="public/assets/avatar.jpg" alt="Vu Minh Chuan" class="avatar">
                     </div>
-                    <div class="job-title" data-i18n="job.neotech.title">Technology Advisor & Project Manager</div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="job.neotech.role">Technology Advisor & Project
-                                Manager</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="job.neotech.team">5</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="job.neotech.stack">Vue.js, Laravel, PHP, MySQL,
-                                Node.js</span>
-                        </div>
+                    <div class="profile-title">
+                        <h1 data-i18n="profile.name">Vu Minh Chuan</h1>
+                        <p class="role" data-i18n="profile.role">Senior Backend Developer</p>
                     </div>
-                    <div class="job-desc" data-i18n="job.neotech.desc">
-                        <ul>
-                            <li>Provide technology consulting and implement SEO-optimized websites for small and medium
-                                enterprises.</li>
-                            <li>Manage end-to-end project delivery from requirements analysis to deployment and
-                                maintenance.</li>
-                            <li>Lead a team of 5 developers to build scalable web solutions with modern tech stack.</li>
-                            <li>Optimize website performance and SEO rankings for client businesses.</li>
-                            <li><a href="https://dichvuwebsitetch.com/" target="_blank">Company Website</a></li>
-                        </ul>
-                    </div>
-                </div>
+                </header>
 
-
-                <div class="job-item">
-                    <div class="job-header">
-                        <span class="company">Toyar INC</span>
-                        <span class="date">4/2025 - Present</span>
-                    </div>
-
-                    <div class="job-item"
-                        style="margin-left: 20px; border-left: 2px solid #eee; padding-left: 15px; margin-bottom: 15px;">
-                        <div class="job-header">
-                            <span class="company" style="font-size: 1em;">2handvn</span>
-                            <span class="date" style="font-size: 0.85em;">9/2025 - Present</span>
-                        </div>
-                        <div class="job-title" data-i18n="job.2handvn.title">Team Leader, Backend, DevOps</div>
-                        <div class="job-metadata">
-                            <div class="job-metadata-item">
-                                <span class="job-metadata-label">Role:</span>
-                                <span class="job-metadata-value" data-i18n="job.2handvn.role">Team Leader, Backend,
-                                    DevOps</span>
-                            </div>
-                            <div class="job-metadata-item">
-                                <span class="job-metadata-label">Team:</span>
-                                <span class="job-metadata-value" data-i18n="job.2handvn.team">4</span>
-                            </div>
-                            <div class="job-metadata-item">
-                                <span class="job-metadata-label">Stack:</span>
-                                <span class="job-metadata-value" data-i18n="job.2handvn.stack">Java, Spring Boot, MySQL,
-                                    Redis, GitHub Actions, Gemini AI, Google Services</span>
-                            </div>
-                        </div>
-                        <div class="job-desc" data-i18n="job.2handvn.desc">
-                            <ul>
-                                <li>Designed and deployed the entire Back-end system and Database architecture for a
-                                    C2B2C model.</li>
-                                <li>Configured CI/CD pipelines using GitHub Actions.</li>
-                                <li>Integrated third-party services: eKYC for user verification, Payoo gateway for
-                                    payments, and Google Services for image verification.</li>
-                                <li>Optimized database performance using caching mechanisms and implemented automated
-                                    i18n support via Google Translate.</li>
-                                <li>Developed an AI-powered pricing valuation feature utilizing the Gemini API.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="job-item"
-                        style="margin-left: 20px; border-left: 2px solid #eee; padding-left: 15px; margin-bottom: 0;">
-                        <div class="job-header">
-                            <span class="company" style="font-size: 1em;">FidoVN</span>
-                            <span class="date" style="font-size: 0.85em;">4/2025 - 9/2025</span>
-                        </div>
-                        <div class="job-title" data-i18n="job.fidovn.title">Team Leader Back-end</div>
-                        <div class="job-metadata">
-                            <div class="job-metadata-item">
-                                <span class="job-metadata-label">Role:</span>
-                                <span class="job-metadata-value" data-i18n="job.fidovn.role">Team Leader Back-end</span>
-                            </div>
-                            <div class="job-metadata-item">
-                                <span class="job-metadata-label">Team:</span>
-                                <span class="job-metadata-value" data-i18n="job.fidovn.team">3</span>
-                            </div>
-                            <div class="job-metadata-item">
-                                <span class="job-metadata-label">Stack:</span>
-                                <span class="job-metadata-value" data-i18n="job.fidovn.stack">Java, Spring Boot, MySQL,
-                                    Redis, Gateway, RabbitMQ, MyBatis, Gemini AI, Alibaba Cloud</span>
-                            </div>
-                        </div>
-                        <div class="job-desc" data-i18n="job.fidovn.desc">
-                            <ul>
-                                <li>AI-CV system development.</li>
-                                <li>Designing a Gateway to automate and standardize SEO for a website.</li>
-                                <li>Designing a system and database to implement the simultaneous integration of Realsee
-                                    and Matterport VR technology for real estate virtual tours.</li>
-                                <li>Improved the performance of the CV-generate-service, leading to a significant
-                                    increase in the speed of CV creation and processing.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="job-item">
-                    <div class="job-header">
-                        <span class="company">Solekia Limited</span>
-                        <span class="date">2/2024 - 1/2025</span>
-                    </div>
-                    <div class="job-title" data-i18n="job.solekia.title">System Engineer / Professional Training (Japan)
-                    </div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="job.solekia.role">System Engineer /
-                                Trainee</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="job.solekia.team">20</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="job.solekia.stack">Java, SQL</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="job.solekia.desc">
-                        <ul>
-                            <li><strong>System Engineer:</strong> Developed a real estate management and sales system
-                                for Tokyo Realestate. Analyzed
-                                requirements, designed the database and architecture for the features received from the
-                                BRSE.</li>
-                            <li><strong>Professional Training:</strong> Participated in intensive training programs on
-                                Japanese language, Japanese corporate
-                                culture, and Java programming skills.</li>
-                            <li>Participated in real-life project simulation exercises to practice problem-solving
-                                skills, requirements analysis, and system design.</li>
-                            <li>Improve communication skills, teamwork in an international and multicultural
-                                environment.</li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="job-item">
-                    <div class="job-header">
-                        <span class="company">SkinProject</span>
-                        <span class="date">8/2024 - 12/2024</span>
-                    </div>
-                    <div class="job-title" data-i18n="job.skinproject.title">Team Leader</div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="job.skinproject.role">Team Leader</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="job.skinproject.team">4</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="job.skinproject.stack">PHP, Laravel,
-                                MySQL</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="job.skinproject.desc">
-                        <ul>
-                            <li>Design and manage the website projects selling decal design files.</li>
-                            <li>Back-end programming with PHP Laravel and MySQL.</li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="job-item">
-                    <div class="job-header">
-                        <span class="company">Ford Tan Thuan</span>
-                        <span class="date">6/2023 - 8/2023</span>
-                    </div>
-                    <div class="job-title" data-i18n="job.ford.title">Backend DevOps</div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="job.ford.role">Backend DevOps</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="job.ford.team">2</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="job.ford.stack">PHP, Laravel, MySQL</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="job.ford.desc">
-                        <ul>
-                            <li>Back-end programming using PHP Laravel and MySQL.</li>
-                            <li>Customer consulting, system design, and project management.</li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="job-item">
-                    <div class="job-header">
-                        <span class="company">SOLEKIA-FREESIA (Japan)</span>
-                        <span class="date">10/2022 - 12/2022</span>
-                    </div>
-                    <div class="job-title" data-i18n="job.solekia_intern.title">Internship</div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="job.solekia_intern.role">Intern</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="job.solekia_intern.team">20</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="job.solekia_intern.stack">Spring Boot,
-                                Java</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="job.solekia_intern.desc">
-                        <ul>
-                            <li>Research and practice using Spring Boot and popular technologies in Japan.</li>
-                            <li>Learn about Japanese corporate culture and working environment.</li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="job-item">
-                    <div class="job-header">
-                        <span class="company">Tekmedi</span>
-                        <span class="date">03/2022 - 05/2022</span>
-                    </div>
-                    <div class="job-title" data-i18n="job.tekmedi.title">Backend Developer - TEK-BTC Project</div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="job.tekmedi.role">Backend Developer</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="job.tekmedi.team">6</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="job.tekmedi.stack">C# .NET, PostgreSQL</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="job.tekmedi.desc">
-                        <ul>
-                            <li>Developed back-end system using C#.NET and PostgreSQL for Medical Examination
-                                Registration, Smart Queuing and Cashless Payment applications.</li>
-                            <li>System deployed at major hospitals such as Thong Nhat, Cho Ray, K Hospital.</li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="job-item">
-                    <div class="job-header">
-                        <span class="company">Reiwa House</span>
-                        <span class="date">3/2021 - 4/2021</span>
-                    </div>
-                    <div class="job-title" data-i18n="job.reiwa.title">Backend Developer</div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="job.reiwa.role">Backend Developer</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="job.reiwa.team">3</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="job.reiwa.stack">PHP, MySQL</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="job.reiwa.desc">
-                        <ul>
-                            <li>Website consulting for customers.</li>
-                            <li>Frontend and backend design.</li>
-                            <li>Design and guide website management according to customer requirements.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h3 class="section-title" data-i18n="section.personal_projects">Personal Projects</h3>
-
-                <div class="project-item">
-                    <div class="job-header">
-                        <span class="company">JPA Spring Boot Generic Service</span>
-                        <span class="date">9/2022 - Present</span>
-                    </div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="project.generic.role">Creator & Developer</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="project.generic.team">1</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="project.generic.stack">Java, Spring Boot,
-                                JPA</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="project.generic.desc">
-                        <p><em>A powerful Spring Boot framework that accelerates backend development through generic
-                                CRUD operations and DTO automation.</em></p>
-                        <ul>
-                            <li><strong>Zero to Five APIs:</strong> Just install and configure - instantly get 5
-                                complete CRUD APIs (Create, Read, Update, Delete, List) for any entity.</li>
-                            <li><strong>Generic Service Layer:</strong> Implements reusable CRUD operations with
-                                built-in JPA Specification support for complex queries.</li>
-                            <li><strong>Auto DTO Mapping:</strong> Seamlessly converts between Entity and DTO layers,
-                                reducing boilerplate code by 70%.</li>
-                            <li><strong>Dynamic Filtering:</strong> Type-safe query building with multi-field search
-                                capabilities.</li>
-                            <li><strong>RESTful Pagination:</strong> Built-in pagination with customizable page size and
-                                sorting.</li>
-                            <li><strong>Production Ready:</strong> Battle-tested in enterprise projects with
-                                comprehensive validation.</li>
-                            <li><a href="https://natswarchuan.github.io/jpa-spring-boot-generic-service/"
-                                    target="_blank">Project Link</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="project-item">
-                    <div class="job-header">
-                        <span class="company">Spring Boot Database Cache Starter</span>
-                        <span class="date">9/2025 - 10/2025</span>
-                    </div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="project.cache.role">Creator & Developer</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="project.cache.team">1</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="project.cache.stack">Java, Spring Boot,
-                                JPA</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="project.cache.desc">
-                        <ul>
-                            <li><strong>CacheManager Implementation:</strong> Stores cache directly in RDBMS,
-                                eliminating the need for Redis.</li>
-                            <li><strong>JPA Integration:</strong> Leverages the power of
-                                <code>spring-boot-starter-data-jpa</code> for cache management.
+                <div class="sidebar-sections">
+                    <section class="contact-section">
+                        <h3 class="sidebar-heading" data-i18n="contact.title">Contact Details</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <span class="label" data-i18n="contact.phone.title">Mobile</span>
+                                <a href="tel:+84908713697">+84 908 713 697</a>
                             </li>
-                            <li><strong>Modern Compatibility:</strong> Fully supports Java 17+ and Spring Boot 3+.</li>
-                            <li><a href="https://natswarchuan.github.io/spring-boot-database-cache-starter/"
-                                    target="_blank">Project Link</a></li>
+                            <li>
+                                <span class="label">Email</span>
+                                <a href="mailto:natswarchuan@gmail.com">natswarchuan@gmail.com</a>
+                            </li>
+                            <li>
+                                <span class="label" data-i18n="contact.address.title">Location</span>
+                                <span data-i18n="contact.address">Ho Chi Minh City, Vietnam</span>
+                            </li>
+                            <li>
+                                <span class="label">Github</span>
+                                <a href="https://github.com/natswarchuan" target="_blank">github.com/natswarchuan</a>
+                            </li>
                         </ul>
-                    </div>
-                </div>
+                    </section>
 
+                    <section class="education-section">
+                        <h3 class="sidebar-heading" data-i18n="education.title">Education</h3>
+                        <div class="edu-item">
+                            <h4 data-i18n="education.school">Thu Duc College of Technology</h4>
+                            <p class="date">2019 - 2022</p>
+                            <p class="degree" data-i18n="education.degree">Software Engineering (Japan Program)</p>
+                        </div>
+                    </section>
 
-                <div class="project-item">
-                    <div class="job-header">
-                        <span class="company">VMC Query Builder</span>
-                        <span class="date">7/2025 - 8/2025</span>
-                    </div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="project.vmc.role">Creator & Developer</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="project.vmc.team">1</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="project.vmc.stack">Java, Spring Boot,
-                                MyBatis</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="project.vmc.desc">
-                        <p><em>Flexible ORM and Query Builder framework based on MyBatis for Spring Boot.</em></p>
-                        <ul>
-                            <li><strong>Entity & Repository Definition:</strong> Provides robust and easily extensible
-                                structures, minimizing boilerplate code.</li>
-                            <li><strong>Dynamic SQL:</strong> Build secure and flexible queries with Fluent API.</li>
-                            <li><strong>Validation & Relations:</strong> Supports data validation directly on DTOs and
-                                efficiently manages complex relationships.</li>
-                            <li><a href="https://natswarchuan.github.io/vmc-query-builder/" target="_blank">Project
-                                    Link</a></li>
+                    <section class="skills-section">
+                        <h3 class="sidebar-heading" data-i18n="skills.title">Technical Expertise</h3>
+                        <div class="skill-group" data-i18n="skills.languages"></div>
+                        <div class="skill-group" data-i18n="skills.frameworks"></div>
+                        <div class="skill-group" data-i18n="skills.database"></div>
+                        <div class="skill-group" data-i18n="skills.tools"></div>
+                    </section>
+
+                    <section class="certificates-section">
+                        <h3 class="sidebar-heading" data-i18n="certificates.title">Certifications</h3>
+                        <ul class="sidebar-list">
+                            <li data-i18n="certificates.1">IT Passport (Japan) 2023</li>
                         </ul>
-                    </div>
-                </div>
+                    </section>
 
-
-                <div class="project-item">
-                    <div class="job-header">
-                        <span class="company">Nihongo no Jisho</span>
-                        <span class="date">4/2024 - 5/2024</span>
-                    </div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="project.nihongo.role">Fullstack Developer</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="project.nihongo.team">1</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="project.nihongo.stack">JavaScript, Gemini
-                                AI</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="project.nihongo.desc">
-                        <ul>
-                            <li>Built an online Japanese learning dictionary integrating GeminiAI tool.</li>
-                            <li>Developed the entire system using JavaScript, focusing on improving user experience in
-                                vocabulary lookup and learning.</li>
-                            <li><a href="https://chuanvm1999.github.io/nihongo-no-jisho/" target="_blank">Project
-                                    Link</a></li>
+                    <section class="languages-section">
+                        <h3 class="sidebar-heading" data-i18n="languages.title">Languages</h3>
+                        <ul class="sidebar-list">
+                            <li data-i18n="languages.en">English: Professional</li>
+                            <li data-i18n="languages.jp">Japanese: Conversational</li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
+            </aside>
 
+            <!-- Main Content -->
+            <main class="main-content">
+                <section class="resume-section about-section">
+                    <h2 class="section-title">
+                        <span data-i18n="section.career_objective">Profile Summary</span>
+                    </h2>
+                    <div class="summary-content" data-i18n="career_objective.content"></div>
+                </section>
 
-                <div class="project-item">
-                    <div class="job-header">
-                        <span class="company">Graduation Project (Class Project)</span>
-                        <span class="date">8/2021 - 12/2021</span>
-                    </div>
-                    <div class="job-title" data-i18n="project.grad.title">Team Manager</div>
-                    <div class="job-metadata">
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Role:</span>
-                            <span class="job-metadata-value" data-i18n="project.grad.role">Team Manager</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Team:</span>
-                            <span class="job-metadata-value" data-i18n="project.grad.team">6</span>
-                        </div>
-                        <div class="job-metadata-item">
-                            <span class="job-metadata-label">Stack:</span>
-                            <span class="job-metadata-value" data-i18n="project.grad.stack">JavaScript,
-                                Microservices</span>
-                        </div>
-                    </div>
-                    <div class="job-desc" data-i18n="project.grad.desc">
-                        <ul>
-                            <li>Design and process back-end data and design flow data on front-end data according to the
-                                microservices model with the theme of an e-commerce site (Tiki, Lazada...).</li>
-                            <li>Manage task division for team members.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                <section class="resume-section experience-section">
+                    <h2 class="section-title">
+                        <span data-i18n="section.work_experience">Professional Experience</span>
+                    </h2>
+                    <div class="timeline">
+                        <!-- NeoTCH -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company">NeoTCH Website Services</h3>
+                                <span class="date">08/2025 - Present</span>
+                            </div>
+                            <h4 class="job-title" data-i18n="job.neotech.title">Technical Advisor</h4>
+                            <div class="job-meta">
+                                <span class="team"><i class="icon-users"></i> <span
+                                        data-i18n="job.neotech.team">5</span> members</span>
+                                <span class="stack"><i class="icon-code"></i> <span
+                                        data-i18n="job.neotech.stack">Laravel, Vue.js</span></span>
+                            </div>
+                            <div class="job-details" data-i18n="job.neotech.desc"></div>
+                        </article>
 
+                        <!-- Toyar INC Parent -->
+                        <div class="company-group">
+                            <div class="company-brand">Toyar INC <span class="date">04/2025 - Present</span></div>
+
+                            <!-- 2handvn -->
+                            <article class="timeline-item nested">
+                                <div class="timeline-header">
+                                    <h3 class="project-name">2handvn</h3>
+                                    <span class="date">09/2025 - Present</span>
+                                </div>
+                                <h4 class="job-title" data-i18n="job.2handvn.title">Team Leader & DevOps</h4>
+                                <div class="job-meta">
+                                    <span class="team"><span data-i18n="job.2handvn.team">4</span> members</span>
+                                    <span class="stack" data-i18n="job.2handvn.stack">Java, Spring Boot, MySQL</span>
+                                </div>
+                                <div class="job-details" data-i18n="job.2handvn.desc"></div>
+                            </article>
+
+                            <!-- FidoVN -->
+                            <article class="timeline-item nested">
+                                <div class="timeline-header">
+                                    <h3 class="project-name">FidoVN</h3>
+                                    <span class="date">04/2025 - 09/2025</span>
+                                </div>
+                                <h4 class="job-title" data-i18n="job.fidovn.title">Backend Team Leader</h4>
+                                <div class="job-meta">
+                                    <span class="team"><span data-i18n="job.fidovn.team">3</span> members</span>
+                                    <span class="stack" data-i18n="job.fidovn.stack">Java, Spring Boot, MyBatis</span>
+                                </div>
+                                <div class="job-details" data-i18n="job.fidovn.desc"></div>
+                            </article>
+                        </div>
+
+                        <!-- Solekia (Japan) -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company">Solekia Limited (Japan)</h3>
+                                <span class="date">02/2024 - 01/2025</span>
+                            </div>
+                            <h4 class="job-title" data-i18n="job.solekia.title">System Engineer</h4>
+                            <div class="job-meta">
+                                <span class="stack" data-i18n="job.solekia.stack">Java, SQL Enterprise</span>
+                            </div>
+                            <div class="job-details" data-i18n="job.solekia.desc"></div>
+                        </article>
+
+                        <!-- SkinProject -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company">SkinProject</h3>
+                                <span class="date">08/2024 - 12/2024</span>
+                            </div>
+                            <h4 class="job-title" data-i18n="job.skinproject.title">Technical Team Lead</h4>
+                            <div class="job-meta">
+                                <span class="stack" data-i18n="job.skinproject.stack">PHP, Laravel, MySQL</span>
+                            </div>
+                            <div class="job-details" data-i18n="job.skinproject.desc"></div>
+                        </article>
+
+                        <!-- Ford Tan Thuan -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company">Ford Tan Thuan</h3>
+                                <span class="date">06/2023 - 08/2023</span>
+                            </div>
+                            <h4 class="job-title" data-i18n="job.ford.title">Backend & DevOps</h4>
+                            <div class="job-meta">
+                                <span class="stack" data-i18n="job.ford.stack">PHP, Laravel, MySQL</span>
+                            </div>
+                            <div class="job-details" data-i18n="job.ford.desc"></div>
+                        </article>
+
+                        <!-- Solekia Intern -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company">SOLEKIA-FREESIA (Japan)</h3>
+                                <span class="date">10/2022 - 12/2022</span>
+                            </div>
+                            <h4 class="job-title" data-i18n="job.solekia_intern.title">Engineering Intern</h4>
+                            <div class="job-meta">
+                                <span class="stack" data-i18n="job.solekia_intern.stack">Spring Boot, Java</span>
+                            </div>
+                            <div class="job-details" data-i18n="job.solekia_intern.desc"></div>
+                        </article>
+
+                        <!-- Tekmedi -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company">Tekmedi</h3>
+                                <span class="date">03/2022 - 05/2022</span>
+                            </div>
+                            <h4 class="job-title" data-i18n="job.tekmedi.title">C# Backend Developer</h4>
+                            <div class="job-meta">
+                                <span class="stack" data-i18n="job.tekmedi.stack">C# .NET, PostgreSQL</span>
+                            </div>
+                            <div class="job-details" data-i18n="job.tekmedi.desc"></div>
+                        </article>
+
+                        <!-- Reiwa House -->
+                        <article class="timeline-item">
+                            <div class="timeline-header">
+                                <h3 class="company">Reiwa House</h3>
+                                <span class="date">03/2021 - 04/2021</span>
+                            </div>
+                            <h4 class="job-title" data-i18n="job.reiwa.title">Backend Developer</h4>
+                            <div class="job-meta">
+                                <span class="stack" data-i18n="job.reiwa.stack">PHP, MySQL</span>
+                            </div>
+                            <div class="job-details" data-i18n="job.reiwa.desc"></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="resume-section projects-section">
+                    <h2 class="section-title">
+                        <span data-i18n="section.personal_projects">Core Technical Projects</span>
+                    </h2>
+                    <div class="projects-grid">
+                        <!-- JPA Generic Service -->
+                        <article class="project-card large">
+                            <div class="project-header">
+                                <h3 class="project-title">JPA Spring Boot Generic Service</h3>
+                                <span class="project-date">2022 - Present</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="role" data-i18n="project.generic.role">Architect</span>
+                                <span class="stack" data-i18n="project.generic.stack">Java, Spring Boot, JPA</span>
+                            </div>
+                            <div class="project-desc" data-i18n="project.generic.desc"></div>
+                        </article>
+
+                        <!-- Cache Starter -->
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">Spring Boot Database Cache</h3>
+                                <span class="project-date">2025</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="role" data-i18n="project.cache.role">Author</span>
+                                <span class="stack" data-i18n="project.cache.stack">Java, Spring Boot</span>
+                            </div>
+                            <div class="project-desc" data-i18n="project.cache.desc"></div>
+                        </article>
+
+                        <!-- Query Builder -->
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">VMC Query Builder</h3>
+                                <span class="project-date">2025</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="role" data-i18n="project.vmc.role">Architect</span>
+                                <span class="stack" data-i18n="project.vmc.stack">Java, MyBatis</span>
+                            </div>
+                            <div class="project-desc" data-i18n="project.vmc.desc"></div>
+                        </article>
+
+                        <!-- Nihongo -->
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">Nihongo no Jisho</h3>
+                                <span class="project-date">2024</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="role" data-i18n="project.nihongo.role">Fullstack</span>
+                                <span class="stack" data-i18n="project.nihongo.stack">JS, Gemini AI</span>
+                            </div>
+                            <div class="project-desc" data-i18n="project.nihongo.desc"></div>
+                        </article>
+
+                        <!-- Graduation -->
+                        <article class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">Microservices E-commerce</h3>
+                                <span class="project-date">2021</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="role" data-i18n="project.grad.role">Lead</span>
+                                <span class="stack" data-i18n="project.grad.stack">JS, Microservices</span>
+                            </div>
+                            <div class="project-desc" data-i18n="project.grad.desc"></div>
+                        </article>
+                    </div>
+                </section>
+            </main>
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="public/js/translations.js"></script>
     <script src="public/js/main.js"></script>
-
 </body>
 
 </html>
