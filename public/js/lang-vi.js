@@ -37,7 +37,7 @@ const lang_vi = {
     "soft_skills.4": "Hợp tác đa chức năng (Cross-functional)",
     "soft_skills.5": "Quản lý thời gian hiệu quả cao",
     "languages.title": "Ngôn ngữ",
-    "languages.en": "<strong>Tiếng Anh:</strong> Sử dụng tốt trong công việc",
+    "languages.en": "<strong>Tiếng Anh:</strong> Giao tiếp cơ bản (TOEIC 450)",
     "languages.jp": "<strong>Tiếng Nhật:</strong> Giao tiếp (JLPT N4)",
     "certificates.title": "Chứng chỉ",
     "certificates.1": "IT Passport (Nhật Bản) 2023",

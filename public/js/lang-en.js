@@ -37,7 +37,7 @@ const lang_en = {
     "soft_skills.4": "Cross-functional Collaboration",
     "soft_skills.5": "High-Efficiency Time Management",
     "languages.title": "Languages",
-    "languages.en": "<strong>English:</strong> Professional Working Proficiency",
+    "languages.en": "<strong>English:</strong> Basic Communication (TOEIC 450)",
     "languages.jp": "<strong>Japanese:</strong> Conversational (JLPT N4)",
     "certificates.title": "Certifications",
     "certificates.1": "IT Passport (IPA, Japan) - 2023",
